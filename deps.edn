@@ -1,0 +1,4 @@
+
+{:paths ["source-code/cljs"]
+ :deps  {bithandshake/cljs-dom {:git/url "https://github.com/bithandshake/cljs-dom"
+                                :sha     "1b6e44c7bca37c79b5918a807a90c62b2253f7f7"}}}
