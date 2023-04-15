@@ -3,7 +3,7 @@
 
 ### Overview
 
-The <strong>cljs-intersection-observer</strong> is a simple ClojureScript library for DOM intersection observers.
+The <strong>cljs-intersection-observer</strong> is a simple ClojureScript library for using DOM intersection observers.
 
 ### deps.edn
 
@@ -31,7 +31,7 @@ You can track the changes of the <strong>cljs-intersection-observer</strong> lib
 
 # Usage
 
-### How to add an intersection observer?
+### How to setup an intersection observer?
 
 The [`intersection-observer.api/setup-observer!`](documentation/cljs/intersection-observer/API.md#setup-observer)
 function setups an intersection observer.
