@@ -24,12 +24,13 @@ The <strong>cljs-intersection-observer</strong> functional documentation is [ava
 
 You can track the changes of the <strong>cljs-intersection-observer</strong> library [here](CHANGES.md).
 
+# Usage
+
 ### Index
 
 - [How to setup an intersection observer?](#how-to-setup-an-intersection-observer)
-- [How to remove an intersection observer?](#how-to-remove-an-intersection-observer)
 
-# Usage
+- [How to remove an intersection observer?](#how-to-remove-an-intersection-observer)
 
 ### How to setup an intersection observer?
 
