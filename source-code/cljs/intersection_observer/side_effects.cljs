@@ -8,7 +8,7 @@
 
 (defn setup-observer!
   ; @warning
-  ; Only use this function when the observed element is already mounted into the React-tree!
+  ; Only use this function when the observed element is already mounted into the DOM-tree!
   ;
   ; @param (string) element-id
   ; @param (function) callback-f
