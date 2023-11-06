@@ -1,5 +1,9 @@
 
-# intersection-observer.api ClojureScript namespace
+### intersection-observer.api
+
+Functional documentation of the intersection-observer.api ClojureScript namespace
+
+---
 
 ##### [README](../../../README.md) > [DOCUMENTATION](../../COVER.md) > intersection-observer.api
 
@@ -8,6 +12,8 @@
 - [remove-observer!](#remove-observer)
 
 - [setup-observer!](#setup-observer)
+
+---
 
 ### remove-observer!
 
@@ -96,5 +102,5 @@ Only use this function when the observed element is already mounted into the DOM
 
 ---
 
-This documentation is generated with the [clj-docs-generator](https://github.com/bithandshake/clj-docs-generator) engine.
+<sub>This documentation is generated with the [clj-docs-generator](https://github.com/bithandshake/clj-docs-generator) engine.</sub>
 

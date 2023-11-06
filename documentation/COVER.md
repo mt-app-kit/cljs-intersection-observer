@@ -1,7 +1,11 @@
 
-# cljs-intersection-observer documentation
+### cljs-intersection-observer
 
-Documentation of the [cljs-intersection-observer](https://github.com/bithandshake/cljs-intersection-observer) ClojureScript library
+Functional documentation of the [cljs-intersection-observer](https://github.com/bithandshake/cljs-intersection-observer) ClojureScript library
+
+---
+
+
 
 ##### [README](../README.md) > DOCUMENTATION
 
@@ -11,5 +15,5 @@ Documentation of the [cljs-intersection-observer](https://github.com/bithandshak
 
 ---
 
-This documentation is generated with the [clj-docs-generator](https://github.com/bithandshake/clj-docs-generator) engine.
+<sub>This documentation is generated with the [clj-docs-generator](https://github.com/bithandshake/clj-docs-generator) engine.</sub>
 
