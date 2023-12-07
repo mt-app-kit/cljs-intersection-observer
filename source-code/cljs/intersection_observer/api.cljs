@@ -5,6 +5,6 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; intersection-observer.side-effects
+; @redirect (intersection-observer.side-effects)
 (def setup-observer!  side-effects/setup-observer!)
 (def remove-observer! side-effects/remove-observer!)
