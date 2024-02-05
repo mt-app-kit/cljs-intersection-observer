@@ -8,7 +8,7 @@
 
 (defn setup-observer!
   ; @important
-  ; Use this function only when the observed element has been already mounted into the DOM-tree!
+  ; Use this function only when the observed element has been already mounted into the DOM tree!
   ;
   ; @param (string) element-id
   ; @param (function) callback-f

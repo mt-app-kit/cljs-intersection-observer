@@ -39,7 +39,7 @@ You can track the changes of the <strong>cljs-intersection-observer</strong> lib
 
 The [`intersection-observer.api/setup-observer!`](documentation/cljs/intersection-observer/API.md#setup-observer)
 function setups an intersection observer.
-Only use this function when the observed element is already mounted into the React-tree!
+Only use this function when the observed element is already mounted into the React tree!
 
 ```
 (defn my-component []
