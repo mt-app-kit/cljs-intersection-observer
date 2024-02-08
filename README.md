@@ -3,56 +3,23 @@
 
 ### Overview
 
-The <strong>cljs-intersection-observer</strong> is a set of DOM intersection observer utility functions for Clojure projects.
+The <strong>cljs-intersection-observer</strong> is a simple DOM element intersection observer for Clojure projects.
 
 ### deps.edn
 
 ```
-{:deps {bithandshake/cljs-intersection-observer {:git/url "https://github.com/bithandshake/cljs-intersection-observer"
-                                                 :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}}
+{:deps {mt-app-kit/cljs-intersection-observer {:git/url "https://github.com/mt-app-kit/cljs-intersection-observer"
+                                               :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}}
 ```
 
 ### Current version
 
-Check out the latest commit on the [release branch](https://github.com/bithandshake/cljs-intersection-observer/tree/release).
+Check out the latest commit on the [release branch](https://github.com/mt-app-kit/cljs-intersection-observer/tree/release).
 
 ### Documentation
 
-The <strong>cljs-intersection-observer</strong> functional documentation is [available here](https://bithandshake.github.io/cljs-intersection-observer).
+The <strong>cljs-intersection-observer</strong> functional documentation is [available here](https://mt-app-kit.github.io/cljs-intersection-observer).
 
 ### Changelog
 
 You can track the changes of the <strong>cljs-intersection-observer</strong> library [here](CHANGES.md).
-
-# Usage
-
-> Some parameters of the following functions and some further functions are not discussed in this file.
-  To learn more about the available functionality, check out the [functional documentation](documentation/COVER.md)!
-
-### Index
-
-- [How to setup an intersection observer?](#how-to-setup-an-intersection-observer)
-
-- [How to remove an intersection observer?](#how-to-remove-an-intersection-observer)
-
-### How to setup an intersection observer?
-
-The [`intersection-observer.api/setup-observer!`](documentation/cljs/intersection-observer/API.md#setup-observer)
-function setups an intersection observer.
-Only use this function when the observed element is already mounted into the React tree!
-
-```
-(defn my-component []
-  [:div {:id :my-element}
-        (setup-observer! "my-element" (fn [intersecting?] ...))])
-
-```
-
-### How to remove an intersection observer?
-
-The [`intersection-observer.api/remove-observer!`](documentation/cljs/intersection-observer/API.md#remove-observer)
-function removes an existing intersection observer.
-
-```
-(remove-observer! "my-element")
-```

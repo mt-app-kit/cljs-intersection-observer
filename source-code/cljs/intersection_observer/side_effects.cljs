@@ -1,34 +1,51 @@
 
 (ns intersection-observer.side-effects
-    (:require [dom.api                     :as dom]
-              [intersection-observer.state :as intersection-observer.state]))
+    (:require [dom.api :as dom]
+              [intersection-observer.state :as state]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
 (defn setup-observer!
-  ; @important
-  ; Use this function only when the observed element has been already mounted into the DOM tree!
-  ;
-  ; @param (string) element-id
-  ; @param (function) callback-f
+  ; @param (keyword) observer-id
+  ; @param (map) observer-props
+  ; {:callback-f (function)
+  ;  :get-element-f (function)
+  ;   Takes the observer ID as parameter.
+  ;   Must return a DOM Element object.}
   ;
   ; @usage
-  ; (setup-observer! "my-element" (fn [intersecting?] ...))
-  [element-id callback-f]
-  (if-let [element (dom/get-element-by-id element-id)]
-          (let [observer (dom/setup-intersection-observer! element callback-f)]
-               (swap! intersection-observer.state/INTERSECTION-OBSERVERS assoc element-id observer))))
+  ; (setup-observer! :my-observer {:callback-f    (fn [intersecting?] ...)
+  ;                                :get-element-f (fn [_] (.getElementById js/document "my-element"))})
+  ; =>
+  ; #object[IntersectionObserver]
+  ;
+  ; @return (JS IntersectionObserver object)
+  [observer-id {:keys [callback-f get-element-f]}]
+  (if get-element-f (if-let [element (get-element-f observer-id)]
+                            (let [observer (dom/setup-intersection-observer! element callback-f)]
+                                 (-> state/OBSERVERS (swap! assoc observer-id observer))
+                                 (-> observer)))))
 
 (defn remove-observer!
-  ; @param (string) element-id
+  ; @param (keyword) observer-id
   ;
   ; @usage
-  ; (remove-observer! "my-element")
+  ; (remove-observer! :my-observer)
+  ; @param (map) observer-props
+  ; {:get-element-f (function)
+  ;   Takes the observer ID as parameter.
+  ;   Must return a DOM Element object.}
   ;
-  ; @return (undefined)
-  [element-id]
-  (if-let [element (dom/get-element-by-id element-id)]
-          (when-let [observer (get @intersection-observer.state/INTERSECTION-OBSERVERS element-id)]
-                    (swap! intersection-observer.state/INTERSECTION-OBSERVERS dissoc element-id)
-                    (dom/remove-intersection-observer! observer element))))
+  ; @usage
+  ; (remove-observer! :my-observer {:get-element-f (fn [_] (.getElementById js/document "my-element")})
+  ; =>
+  ; #object[IntersectionObserver]
+  ;
+  ; @return (JS IntersectionObserver object)
+  [observer-id {:keys [get-element-f]}]
+  (if get-element-f (if-let [element (get-element-f observer-id)]
+                            (when-let [observer (get @state/OBSERVERS observer-id)]
+                                      (-> state/OBSERVERS (swap! dissoc observer-id))
+                                      (-> observer (dom/remove-intersection-observer! element))
+                                      (-> observer)))))

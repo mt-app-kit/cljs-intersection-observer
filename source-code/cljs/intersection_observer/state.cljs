@@ -4,7 +4,14 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @ignore
+; @description
+; Stored IntersectionObserver objects.
 ;
 ; @atom (map)
-(defonce INTERSECTION-OBSERVERS (atom {}))
+; {:my-observer (JS IntersectionObserver object)}
+;
+; @usage
+; (deref OBSERVERS)
+; =>
+; {:my-observer #object[IntersectionObserver]}
+(def OBSERVERS (atom {}))
