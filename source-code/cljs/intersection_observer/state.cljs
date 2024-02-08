@@ -5,10 +5,10 @@
 ;; ----------------------------------------------------------------------------
 
 ; @description
-; Stored IntersectionObserver objects.
+; Stored 'IntersectionObserver' objects.
 ;
 ; @atom (map)
-; {:my-observer (JS IntersectionObserver object)}
+; {:my-observer (DOM IntersectionObserver object)}
 ;
 ; @usage
 ; (deref OBSERVERS)

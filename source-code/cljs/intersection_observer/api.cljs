@@ -1,12 +1,13 @@
 
 (ns intersection-observer.api
     (:require [intersection-observer.side-effects :as side-effects]
-              [intersection-observer.state :as state]))
+              [intersection-observer.state :as state]
+              [intersection-observer.views :as views]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; @tutorial Demo
+; @tutorial Demo #1
 ;
 ; @code Element object function
 ; (defn get-my-element-f
@@ -31,9 +32,24 @@
 ; @code Element lifecycles
 ; (defn my-ui
 ;   []
-;   (reagent.core/create-class {:component-did-mount    setup-my-observer!
-;                               :component-will-unmount remove-my-observer!
-;                               :reagent-render (fn [] [:div {:id :my-element} "My observed element"])}))
+;   (reagent.core/create-class {:component-did-mount    (fn [] (setup-my-observer!)
+;                               :component-will-unmount (fn [] (remove-my-observer!)
+;                               :reagent-render         (fn [] [:div {:id :my-element} "My observed element"])}))
+
+;; ----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
+
+; @tutorial Demo #2
+;
+; @code Callback function
+; (defn my-callback-f
+;   [intersect?]
+;   (println intersect?))
+;
+; @code Intersection sensor
+; (defn my-ui
+;   []
+;   [sensor :my-observer {:callback-f my-callback-f}])
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -44,3 +60,6 @@
 
 ; @redirect (intersection-observer.state/*)
 (def OBSERVERS state/OBSERVERS)
+
+; @redirect (intersection-observer.views/*)
+(def sensor views/sensor)
