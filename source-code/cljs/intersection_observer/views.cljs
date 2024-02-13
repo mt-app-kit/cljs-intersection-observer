@@ -12,7 +12,7 @@
   ; @description
   ; Intersection sensor component that automatically ...
   ; ... sets up an intersection observer when mounts,
-  ; ... removes the intersection observer when unmounts.
+  ; ... disconnects the intersection observer when unmounts.
   ;
   ; @param (keyword)(opt) observer-id
   ; @param (map) observer-props

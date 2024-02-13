@@ -9,27 +9,27 @@
 
 ; @tutorial Demo #1
 ;
-; @code Element object function
+; @--- Element object function
 ; (defn get-my-element-f
 ;   [_]
 ;   (.getElementById js/document "my-element"))
 ;
-; @code Callback function
+; @--- Callback function
 ; (defn my-callback-f
 ;   [intersect?]
 ;   (println intersect?))
 ;
-; @code Setup observer function
+; @--- Setup observer function
 ; (defn setup-my-observer!
 ;   []
 ;   (setup-observer! :my-observer {:callback-f my-callback-f :get-element-f get-my-element-f}))
 ;
-; @code Remove observer function
+; @--- Remove observer function
 ; (defn remove-my-observer!
 ;   []
 ;   (remove-observer! :my-observer {:get-element-f get-my-element-f}))
 ;
-; @code Element lifecycles
+; @--- Element lifecycles
 ; (defn my-ui
 ;   []
 ;   (reagent.core/create-class {:component-did-mount    (fn [] (setup-my-observer!)
@@ -41,12 +41,12 @@
 
 ; @tutorial Demo #2
 ;
-; @code Callback function
+; @--- Callback function
 ; (defn my-callback-f
 ;   [intersect?]
 ;   (println intersect?))
 ;
-; @code Intersection sensor
+; @--- Intersection sensor
 ; (defn my-ui
 ;   []
 ;   [sensor :my-observer {:callback-f my-callback-f}])
