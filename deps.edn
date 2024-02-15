@@ -1,7 +1,7 @@
 
 {:paths ["source-code/cljs"]
  :deps  {bithandshake/cljs-dom       {:git/url "https://github.com/bithandshake/cljs-dom"
-                                      :sha     "75a1e7e8214cdf00072487f17725a257f94dc1e7"}
+                                      :sha     "08e9d945eba63da1fdd2766e76ff6b3d751eab9c"}
          mt-app-kit/react-references {:git/url "https://github.com/mt-app-kit/cljs-react-references"
                                       :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}
          org.clojure/clojurescript   {:mvn/version "1.10.891"}
