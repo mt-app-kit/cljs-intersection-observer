@@ -1,9 +1,9 @@
 
 (ns intersection-observer.views
     (:require [reagent.core]
+              [fruits.random.api                  :as random]
               [intersection-observer.side-effects :as side-effects]
-              [react-references.api :as react-references]
-              [fruits.random.api :as random]))
+              [react-references.api               :as react-references]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

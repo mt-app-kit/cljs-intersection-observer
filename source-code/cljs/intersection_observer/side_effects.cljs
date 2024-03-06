@@ -1,6 +1,6 @@
 
 (ns intersection-observer.side-effects
-    (:require [dom.api :as dom]
+    (:require [dom.api                     :as dom]
               [intersection-observer.state :as state]))
 
 ;; ----------------------------------------------------------------------------

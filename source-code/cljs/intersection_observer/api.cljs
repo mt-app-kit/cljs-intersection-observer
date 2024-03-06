@@ -1,8 +1,8 @@
 
 (ns intersection-observer.api
     (:require [intersection-observer.side-effects :as side-effects]
-              [intersection-observer.state :as state]
-              [intersection-observer.views :as views]))
+              [intersection-observer.state        :as state]
+              [intersection-observer.views        :as views]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
