@@ -3,6 +3,6 @@
  :deps  {mt-app-kit/react-references {:git/url "https://github.com/mt-app-kit/cljs-react-references"
                                       :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}
          mt-utilities/cljs-dom       {:git/url "https://github.com/mt-utilities/cljs-dom"
-                                      :sha     "3c958fdb078640b928aefb30f5b644443809858b"}
+                                      :sha     "7d9641ceafa03a380b0b8c5151264de27fb47226"}
          org.clojure/clojurescript   {:mvn/version "1.10.891"}
          reagent/reagent             {:mvn/version "1.2.0"}}}
