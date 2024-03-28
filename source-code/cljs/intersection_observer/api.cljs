@@ -1,9 +1,8 @@
 
 (ns intersection-observer.api
     (:require [intersection-observer.side-effects :as side-effects]
-              [intersection-observer.state        :as state]
               [intersection-observer.views        :as views]))
- 
+
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
@@ -64,9 +63,6 @@
 ; @redirect (intersection-observer.side-effects/*)
 (def setup-observer!  side-effects/setup-observer!)
 (def remove-observer! side-effects/remove-observer!)
-
-; @redirect (intersection-observer.state/*)
-(def OBSERVERS state/OBSERVERS)
 
 ; @redirect (intersection-observer.views/*)
 (def sensor views/sensor)
