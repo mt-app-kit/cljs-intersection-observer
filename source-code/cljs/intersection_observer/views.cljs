@@ -33,4 +33,4 @@
    (reagent.core/create-class {:component-did-mount    (fn [_ _] (side-effects/setup-observer!  observer-id {:get-element-f react-references/get-reference :callback-f callback-f}))
                                :component-will-unmount (fn [_ _] (side-effects/remove-observer! observer-id {:get-element-f react-references/get-reference}))
                                :reagent-render         (fn [_ _] [:div {:class (-> :intersection-observer--sensor)
-                                                                        :ref   (-> observer-id react-references/set-reference-f)}])})))
+                                                                        :ref   (-> observer-id react-references/store-reference-f)}])})))
